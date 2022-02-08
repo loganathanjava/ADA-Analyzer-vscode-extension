@@ -1,0 +1,51 @@
+{
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "css.completion.completePropertyWithSemicolon": false,
+    "json.schemas": [
+    
+    ],
+    "terminal.integrated.shellArgs.windows": [
+        "-ExecutionPolicy",
+        "Bypass"
+    ],
+    "terminal.integrated.automationShell.windows": [
+        "-ExecutionPolicy",
+        "Bypass"
+    ],
+    "LightningADAAnalyzer.rule-attribute": [
+        { "attribute": "name", "required": true, "minLength": 2, "message": "Attribute name should be presented in attribute tag."},
+        { "attribute": "type", "required": true, "minLength": 2, "message": "Attribute type should be presented in attribute tag."}
+    ],
+    "LightningADAAnalyzer.rule-checkboxGroup": [
+        { "attribute": "name", "required": true, "minLength": 2, "message": "Attribute name should be presented in checkboxGroup tag."},
+        { "attribute": "options", "required": true, "minLength": 2, "message": "Attribute options should be presented in checkboxGroup tag."},
+        { "attribute": "value", "required": true, "minLength": 2, "message": "Attribute value should be presented in checkboxGroup tag."}
+    ],
+    "LightningADAAnalyzer.rule-input": [
+        { "attribute": "type", "required": true, "minLength": 2, "message": "Attribute type should be presented in input tag."},
+        { "attribute": "label", "required": true, "minLength": 2, "message": "Attribute label should be presented in input tag."},
+        { "attribute": "value", "required": true, "minLength": 2, "message": "Attribute value should be presented in input tag."}
+    ],
+    "LightningADAAnalyzer.rule-select": [
+        { "attribute": "label", "required": true, "minLength": 2, "message": "Attribute label should be presented in select tag."}
+    ],
+    "LightningADAAnalyzer.rule-option": [
+        { "attribute": "value", "required": true, "minLength": 2, "message": "Attribute label should be presented in option tag."}
+    ],
+    "LightningADAAnalyzer.rule-buttonIcon": [
+        { "attribute": "iconName", "required": true, "minLength": 2, "message": "Attribute iconName should be presented in buttonIcon tag."},
+        { "attribute": "alternativeText", "required": true, "minLength": 2, "message": "Attribute alternativeText should be presented in buttonIcon tag."},
+        { "attribute": "title", "required": true, "minLength": 2, "message": "Attribute title should be presented in buttonIcon tag."}
+    ],
+    "LightningADAAnalyzer.rule-combobox": [
+        { "attribute": "options", "required": true, "minLength": 2, "message": "Attribute options should be presented in combobox tag."},
+        { "attribute": "label", "required": true, "minLength": 2, "message": "Attribute label should be presented in combobox tag."}
+    ],
+    "LightningADAAnalyzer.rule-button": [
+        { "attribute": "label", "required": true },
+        { "attribute": "type", "required": true },
+        { "attribute": "name", "required": true }
+    ],
+    "LightningADAAnalyzer.tag-exclude" : "h1,p "
+}
