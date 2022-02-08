@@ -1,0 +1,28 @@
+{
+	"button" : [
+		{
+			"attribute": "label",
+			"required": true,
+			"length": 1,
+			"message": "Attribute label should be presented for button"
+		},{
+			"attribute": "type",
+			"required": true,
+			"message": "Attribute type should be presented for button"
+		},{
+			"attribute": "name",
+			"required": true,
+			"length": 1,
+			"message": "Attribute name should be presented for button"
+		}
+	],
+	
+	"inputField" : [
+		{
+			"attribute": "fieldName",
+			"required": true,
+			"length": 1,
+			"message": "Attribute type should be presented for button"
+		}
+	]
+}

@@ -1,0 +1,85 @@
+{
+	"name": "LightningADAAnalyzer",
+	"publisher": "Olympus",
+	"displayName": "Lightning ADA Analyzer",
+	"description": "Sample extension practice",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.20.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "onAnalyzeLogan",
+				"title": "Lightning ADA: Analyze"
+			}
+		],
+		"menus": {
+			"explorer/context": [{
+				"command": "onAnalyzeLogan",
+				"when": "explorerResourceIsFolder == true"
+			},{
+				"command": "onAnalyzeLogan",
+				"when": "resourceExtname == .html"
+			},{
+				"command": "onAnalyzeLogan",
+				"when": "resourceExtname == .cmp"
+			}]
+		},
+		"configuration" : {
+			"title": "Lightning ADA Analyzer",
+			"type": "object",
+			"properties": {
+				"LightningADAAnalyzer.tag-exclude": {
+					"type": "String",
+					"default": "h1"
+				},				
+				  "LightningADAAnalyzer.rule-button": {
+					"type": "object",
+					"default": [{
+						"attribute": "label",
+						"required": true,
+						"minLength": 2,
+						"message": "Attribute label should be presented in button."
+					},{
+						"attribute": "type",
+						"required": true,
+						"message": "Attribute type should be presented in button."
+
+					},{
+						"attribute": "name",
+						"required": false,
+						"message": "Remove the name attribute from button in button."
+					}]
+				  }
+			}
+		}
+
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.20.0",
+		"@types/glob": "^7.1.4",
+		"@types/mocha": "^9.0.0",
+		"@types/node": "14.x",
+		"eslint": "^8.1.0",
+		"glob": "^7.1.7",
+		"mocha": "^9.1.3",
+		"typescript": "^4.4.4",
+		"@vscode/test-electron": "^1.6.2"
+	},
+	"dependencies": {
+		"fast-html-parser": "^1.0.1"
+	}
+}
